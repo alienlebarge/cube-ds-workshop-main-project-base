@@ -3,6 +3,89 @@
 
 @import '../../node_modules/gorko/gorko.scss';
 
+// Start Global
+body {
+  background: get-color('primary');
+
+  @include apply-utility('font', 'base');
+}
+
+svg {
+  width: 1em;
+  height: 1em;
+}
+
+h1,
+h2 {
+  @include apply-utility('font', 'serif');
+}
+
+h1 {
+  font-size: get-size('900');
+}
+
+h2 {
+  font-size: get-size('800');
+}
+
+h3 {
+  font-style: italic;
+  font-size: get-size('700');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  max-width: 30ch;
+}
+
+p,
+li,
+dl,
+blockquote {
+  max-width: 70ch;
+}
+
+:focus {
+  outline: 1px solid currentcolor;
+  outline-offset: 0.25rem;
+}
+
+a {
+  color: currentcolor;
+  &:hover {
+  }
+}
+
+label {
+  color: get-color('secondary');
+}
+
+input {
+  border: 5px solid get-color('primary');
+  background: get-color('slate');
+  height: get-size('900');
+}
+
+@include media-query('md') {
+  h1 {
+    font-size: get-size('1000');
+  }
+
+  h2 {
+    font-size: get-size('900');
+  }
+
+  h3 {
+    font-style: italic;
+    font-size: get-size('800');
+  }
+}
+
 // Import utilities
 @import 'utilities/flow';
 @import 'utilities/split-pair';
@@ -17,3 +100,5 @@
 // Import compositions
 @import 'compositions/sign-up';
 @import 'compositions/tiles';
+@import 'compositions/intro';
+@import 'compositions/logo-reel';

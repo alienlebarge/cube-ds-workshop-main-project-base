@@ -5,6 +5,19 @@
     input {
       width: 100%;
     }
+
+    .button {
+      background: get-color('secondary');
+      text-decoration: none;
+      padding-top: get-size('300');
+      padding-right: get-size('600');
+      padding-bottom: get-size('300');
+      padding-left: get-size('600');
+      display: inline-block;
+      font-style: italic;
+      font-size: get-size('500');
+      text-transform: uppercase;
+    }
   }
 
   .heading {
