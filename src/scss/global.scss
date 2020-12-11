@@ -3,7 +3,6 @@
 
 @import '../../node_modules/gorko/gorko.scss';
 
-
 body {
   color: get-color('dark');
   background: get-color('primary');
@@ -53,8 +52,13 @@ a:hover {
 
 // Import blocks
 @import 'blocks/brand';
+@import 'blocks/button';
+@import 'blocks/field';
+@import 'blocks/heading';
+@import 'blocks/logos';
 @import 'blocks/media';
 @import 'blocks/nav';
+@import 'blocks/tile';
 
 // Import compositions
 @import 'compositions/sign-up';
