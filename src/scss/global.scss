@@ -3,87 +3,46 @@
 
 @import '../../node_modules/gorko/gorko.scss';
 
-// Start Global
+
 body {
+  color: get-color('dark');
   background: get-color('primary');
 
   @include apply-utility('font', 'base');
 }
 
-svg {
-  width: 1em;
-  height: 1em;
-}
-
-h1,
-h2 {
-  @include apply-utility('font', 'serif');
-}
-
-h1 {
-  font-size: get-size('900');
-}
-
-h2 {
-  font-size: get-size('800');
-}
-
-h3 {
-  font-style: italic;
-  font-size: get-size('700');
-}
+/// Default typography
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   line-height: 1.1;
   max-width: 30ch;
 }
 
-p,
-li,
-dl,
-blockquote {
+a {
+  color: currentColor;
+}
+
+p {
   max-width: 70ch;
 }
 
+svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+}
+
+// Interactive states
 :focus {
-  outline: 1px solid currentcolor;
+  outline: 1px solid get-color('tertiary');
   outline-offset: 0.25rem;
 }
 
-a {
-  color: currentcolor;
-  &:hover {
-  }
-}
-
-label {
-  color: get-color('secondary');
-}
-
-input {
-  border: 5px solid get-color('primary');
-  background: get-color('slate');
-  height: get-size('900');
-}
-
-@include media-query('md') {
-  h1 {
-    font-size: get-size('1000');
-  }
-
-  h2 {
-    font-size: get-size('900');
-  }
-
-  h3 {
-    font-style: italic;
-    font-size: get-size('800');
-  }
+a:hover {
+  text-decoration: underline;
 }
 
 // Import utilities
@@ -94,12 +53,9 @@ input {
 
 // Import blocks
 @import 'blocks/brand';
-@import 'blocks/button';
 @import 'blocks/media';
 @import 'blocks/nav';
 
 // Import compositions
 @import 'compositions/sign-up';
 @import 'compositions/tiles';
-@import 'compositions/intro';
-@import 'compositions/logo-reel';
