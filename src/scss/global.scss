@@ -61,5 +61,7 @@ a:hover {
 @import 'blocks/tile';
 
 // Import compositions
+@import 'compositions/hero';
+@import 'compositions/intro';
 @import 'compositions/sign-up';
 @import 'compositions/tiles';
